@@ -31,27 +31,55 @@ namespace WebApplication1.App_Code
 
         public DataTable getTable(String SQL)
         {
-            MoKetNoi();
-            SqlDataAdapter adp = new SqlDataAdapter(SQL, con);
-            DataTable tb = new DataTable();
-            adp.Fill(tb);
-            DongKetNoi();
+            DataTable tb = null;
+            try
+            {
+                this.MoKetNoi();
+                SqlDataAdapter adp = new SqlDataAdapter(SQL, con);
+                tb = new DataTable();
+                adp.Fill(tb);
+                this.DongKetNoi();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                this.DongKetNoi();
+
+            }
             return tb;
         }
-
         public DataTable getTable(String nameprocedurce, SqlParameter[] pr)
         {
-            MoKetNoi();
-            DataTable tb = new DataTable();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = nameprocedurce;
-            if (pr != null)
-                cmd.Parameters.AddRange(pr);
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
-            adp.Fill(tb);
-            DongKetNoi();
+            DataTable tb = null;
+            try
+            {
+                this.MoKetNoi();
+                tb = new DataTable();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = nameprocedurce;
+                if (pr != null)
+                    cmd.Parameters.AddRange(pr);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(tb);
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                this.DongKetNoi();
+
+            }
             return tb;
         }
 
@@ -67,25 +95,52 @@ namespace WebApplication1.App_Code
 
         public int ExeCute(string SQL)
         {
-            this.MoKetNoi();
-            SqlCommand cmd = new SqlCommand(SQL, this.con);
-            this.DongKetNoi();
-            int k = (int)cmd.ExecuteNonQuery();
+            int k = 0;
+            try
+            {
+                this.MoKetNoi();
+                SqlCommand cmd = new SqlCommand(SQL, this.con);
+                k = (int)cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                this.DongKetNoi();
+
+            }
+            return k;
+
+
+        }
+        public int ExeCute(String nameprocedurce, SqlParameter[] pr)
+        {
+            int k = 0;
+            try
+            {
+                this.MoKetNoi();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = nameprocedurce;
+                if (pr != null)
+                    cmd.Parameters.AddRange(pr);
+                k = (int)cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                this.DongKetNoi();
+
+            }
             return k;
         }
 
-        public int ExeCute(String nameprocedurce, SqlParameter[] pr)
-        {
-            MoKetNoi();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = nameprocedurce;
-            if (pr != null)
-                cmd.Parameters.AddRange(pr);
-            DongKetNoi();
-            int k = (int)cmd.ExecuteNonQuery();
-            return k;
-        }
     }
 }

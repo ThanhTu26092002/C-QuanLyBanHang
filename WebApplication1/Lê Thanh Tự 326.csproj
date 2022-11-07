@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ADMIN\pageQUANLYDANHMUC.aspx" />
     <Content Include="App_Data\DbQuanlybanhang.mdf" />
     <Content Include="App_Data\DbQuanlybanhang_log.ldf">
       <DependentUpon>DbQuanlybanhang.mdf</DependentUpon>
@@ -108,6 +109,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMIN\pageQUANLYDANHMUC.aspx.cs">
+      <DependentUpon>pageQUANLYDANHMUC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\pageQUANLYDANHMUC.aspx.designer.cs">
+      <DependentUpon>pageQUANLYDANHMUC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\CART.cs" />
     <Compile Include="App_Code\ITEM.cs" />
     <Compile Include="App_Code\XuLyDuLieu.cs" />
