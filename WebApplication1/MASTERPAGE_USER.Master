@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MASTERPAGE_USER.Master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 41px;
+        }
+        .auto-style2 {
+            height: 289px;
+        }
+        .auto-style3 {
+            height: 289px;
+            width: 293px;
+        }
+        .auto-style4 {
+            height: 289px;
+            width: 652px;
+        }
+        .auto-style5 {
+            width: 1064px;
+            height: 187px;
+            margin-right: 38px;
+        }
+        .auto-style6 {
+            width: 1066px;
+            height: 197px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+    <table style="width:100%;" border="1">
+        <tr>
+            <td colspan="3">
+                <img alt="" class="auto-style5" src="IMAGES/shophoa.jpg" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style3" style="vertical-align: top">Danh Mục Đồ Uống
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <br />
+                        <a href="DANHSACHSANPHAM.aspx?MADANHMUC=<%# Eval("MADANHMUC")%>"> <%# Eval("TENDANHMUC") %> </a>                       
+                        <br />
+                    </ItemTemplate>
+                </asp:Repeater>
+            </td>
+            <td class="auto-style4" style="vertical-align: top">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </td>
+            <td class="auto-style2" style="vertical-align: top"></td>
+        </tr>
+        <tr>
+            <td class="auto-style1" colspan="3">
+                <img alt="" class="auto-style6" src="IMAGES/ket.png" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1" colspan="3">&nbsp;</td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
