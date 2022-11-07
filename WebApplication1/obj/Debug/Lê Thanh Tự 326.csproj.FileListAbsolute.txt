@@ -165,3 +165,4 @@ C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\obj\Debug\Lê Thanh 
 C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\obj\Debug\Lê Thanh Tự 326.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\obj\Debug\Lê Thanh Tự 326.csprojAssemblyReference.cache

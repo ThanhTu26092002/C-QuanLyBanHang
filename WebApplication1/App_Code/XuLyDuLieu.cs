@@ -13,7 +13,7 @@ namespace WebApplication1.App_Code
         public XuLyDuLieu()
         {
             con = new SqlConnection();
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Desktop\Quanlybanhang\Quanlybanhang\WebApplication1\WebApplication1\App_Data\DbQuanlybanhang.mdf;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Desktop\code\C-QuanLyBanHang\WebApplication1\App_Data\DbQuanlybanhang.mdf;Integrated Security=True";
 
         }
 
