@@ -32,6 +32,8 @@
                 <td class="auto-style1">&nbsp;</td>
                 <td>
                     <asp:Button ID="btn_luu" runat="server" OnClick="btn_luu_Click" Text="Lưu" />
+                    <asp:Button ID="btnXoa_Click" runat="server" OnClick="btnXoa_Click_Click" Text="Xóa" />
+                    <asp:Button ID="btnSua_Click" runat="server" OnClick="btnSua_Click_Click" Text="Sửa" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

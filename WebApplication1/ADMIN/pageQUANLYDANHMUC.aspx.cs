@@ -39,5 +39,22 @@ namespace WebApplication1.ADMIN
             int k = xulydulieu.ExeCute("psAddDanhmuc", pr);
             LoadDanhMuc();
         }
+
+        protected void btnXoa_Click_Click(object sender, EventArgs e)
+        {
+            SqlParameter[] pr = new SqlParameter[1];
+            pr[0] = new SqlParameter("@MADANHMUC", txtMaDanhMuc.Text);
+            int k = xulydulieu.ExeCute("psXoaDanhMuc", pr);
+            LoadDanhMuc();
+        }
+
+        protected void btnSua_Click_Click(object sender, EventArgs e)
+        {
+            SqlParameter[] pr = new SqlParameter[2];
+            pr[0] = new SqlParameter("@MADANHMUC", txtMaDanhMuc.Text);
+            pr[1] = new SqlParameter("@TENDANHMUC", txtTenDanhMuc.Text);
+            int k = xulydulieu.ExeCute("psEditDanhMuc", pr);
+            LoadDanhMuc();
+        }
     }
 }

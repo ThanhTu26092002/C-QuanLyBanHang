@@ -49,6 +49,24 @@ namespace WebApplication1.ADMIN {
         protected global::System.Web.UI.WebControls.Button btn_luu;
         
         /// <summary>
+        /// btnXoa_Click control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnXoa_Click;
+        
+        /// <summary>
+        /// btnSua_Click control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSua_Click;
+        
+        /// <summary>
         /// grvDANHMUC control.
         /// </summary>
         /// <remarks>
